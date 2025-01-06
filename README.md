@@ -71,6 +71,3 @@ This project was built using:
 - **Name:** Sanvaad Shende
 - **LinkedIn Profile:** [Sanvaad Shende](https://www.linkedin.com/in/sanvaad/)
 
----
-
-Feel free to replace placeholders (like screenshots or demo links) with the actual details from your project!
