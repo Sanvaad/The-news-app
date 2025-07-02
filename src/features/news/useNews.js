@@ -19,10 +19,13 @@ export const useNews = () => {
           url: article.url,
           title: article.title,
           urlToImage: article.urlToImage,
+<<<<<<< HEAD
           description: article.description,
           source: article.source,
           author: article.author,
           publishedAt: article.publishedAt,
+=======
+>>>>>>> 6ca7a2d1585679c85c7afef27838194f49b42fd2
         })
       );
     }

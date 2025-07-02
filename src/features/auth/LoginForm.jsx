@@ -1,19 +1,29 @@
 import { useState } from "react";
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
+=======
+>>>>>>> 6ca7a2d1585679c85c7afef27838194f49b42fd2
 
 import { useLogin } from "./useLogin";
 
 import Spinner from "../../ui/Spinner";
 
 function LoginForm() {
+<<<<<<< HEAD
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login, isLoading } = useLogin();
   const navigate = useNavigate();
+=======
+  const [email, setEmail] = useState("sanvaad@example.com");
+  const [password, setPassword] = useState("san123");
+  const { login, isLoading } = useLogin();
+>>>>>>> 6ca7a2d1585679c85c7afef27838194f49b42fd2
 
   function handleSubmit(e) {
     e.preventDefault();
     if (!email || !password) return;
+<<<<<<< HEAD
     login({ email, password });
   }
 
@@ -109,6 +119,54 @@ function LoginForm() {
         </div>
       </form>
     </div>
+=======
+    login(
+      { email, password },
+      {
+        onSettled: () => {
+          setEmail("");
+          setPassword("");
+        },
+      }
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="flex flex-col">
+      <label htmlFor="email" className="text-[1.1rem] mb-2">
+        Email address
+      </label>
+      <input
+        type="email"
+        id="email"
+        // This makes this form better for password managers
+        autoComplete="username"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        disabled={isLoading}
+        className="w-[20rem]   p-2 border-solid border-[2px] box-border  border-[#d7d7d7]	 outline-none mb-5 focus:outline-[#ec9898] focus:border-[#fff] box-border"
+      />
+      <label htmlFor="password" className="mb-1">
+        Password
+      </label>
+      <input
+        type="password"
+        id="password"
+        autoComplete="current-password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        disabled={isLoading}
+        className="w-[20rem] p-2 mb-7  border-solid border-[2px]  border-[#d7d7d7]	 outline-none focus:outline-[#ec9898] focus:border-[#fff] box-border"
+      />
+
+      <button
+        className="bg-[#ff3838] py-3 rounded-[100px] text-[#fff]"
+        disabled={isLoading}
+      >
+        {!isLoading ? "Log in" : <Spinner />}
+      </button>
+    </form>
+>>>>>>> 6ca7a2d1585679c85c7afef27838194f49b42fd2
   );
 }
 

@@ -1,8 +1,14 @@
 import React from "react";
+<<<<<<< HEAD
+=======
+import bookmarkoutline from "../images/bookmarkoutline.svg";
+import bookmarkfill from "../images/bookmarkfill.svg";
+>>>>>>> 6ca7a2d1585679c85c7afef27838194f49b42fd2
 import { useNews } from "../features/news/useNews";
 
 export default function BookmarkBtn({ article }) {
   const { isArticleBookmarked, handleBookmarkToggle } = useNews();
+<<<<<<< HEAD
   const isBookmarked = isArticleBookmarked(article.url);
 
   return (
@@ -32,5 +38,18 @@ export default function BookmarkBtn({ article }) {
         </svg>
       )}
     </button>
+=======
+
+  return (
+    <div>
+      <button onClick={() => handleBookmarkToggle(article)}>
+        {isArticleBookmarked(article.url) ? (
+          <img src={bookmarkfill} alt="" className="h-7" />
+        ) : (
+          <img src={bookmarkoutline} alt="" className="h-7" />
+        )}
+      </button>
+    </div>
+>>>>>>> 6ca7a2d1585679c85c7afef27838194f49b42fd2
   );
 }

@@ -2,6 +2,7 @@
 
 import FeatureArticle from "./FeatureArticle";
 import ArticleLayout from "./ArticleLayout";
+<<<<<<< HEAD
 import BookmarkBtn from "./BookmarkBtn";
 
 export default function News({ articles }) {
@@ -69,5 +70,18 @@ export default function News({ articles }) {
 
       <ArticleLayout articles={remainingArticles} />
     </main>
+=======
+
+export default function News({ articles }) {
+  const firstArticle =
+    articles[0] && articles[0].title === "[Removed]"
+      ? articles[1]
+      : articles[0];
+  return (
+    <div className="w-full px-[2.8rem]">
+      <FeatureArticle firstArticle={firstArticle} />
+      <ArticleLayout articles={articles} />
+    </div>
+>>>>>>> 6ca7a2d1585679c85c7afef27838194f49b42fd2
   );
 }

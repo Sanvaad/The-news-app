@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -44,6 +45,8 @@
   }
 }
 
+=======
+>>>>>>> 6ca7a2d1585679c85c7afef27838194f49b42fd2
 * {
   margin: 0;
   padding: 0;
@@ -53,7 +56,10 @@
 html {
   font-family: "Kanit", sans-serif;
 }
+<<<<<<< HEAD
 
 body {
   background-color: rgb(249 250 251);
 }
+=======
+>>>>>>> 6ca7a2d1585679c85c7afef27838194f49b42fd2

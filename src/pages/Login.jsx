@@ -1,13 +1,22 @@
+<<<<<<< HEAD
 import { useEffect, useCallback } from "react";
 import LoginForm from "../features/auth/LoginForm";
 import { useUser } from "../features/auth/useUser";
 import Spinner from "../ui/Spinner";
 import { Navigate } from "react-router-dom";
 import supabase from "../services/supabase";
+=======
+import LoginForm from "../features/auth/LoginForm";
+import Logo from "../ui/Logo";
+import { useUser } from "../features/auth/useUser";
+import Spinner from "../ui/Spinner";
+import { Navigate } from "react-router-dom";
+>>>>>>> 6ca7a2d1585679c85c7afef27838194f49b42fd2
 
 export default function Login() {
   const { isLoading, isAuthenticated } = useUser();
 
+<<<<<<< HEAD
   // Define the global callback function
   const handleSignInWithGoogle = useCallback(async (response) => {
     try {
@@ -113,6 +122,10 @@ export default function Login() {
         <Spinner />
       </div>
     );
+=======
+  if (isLoading) {
+    return <Spinner />;
+>>>>>>> 6ca7a2d1585679c85c7afef27838194f49b42fd2
   }
 
   if (isAuthenticated) {
@@ -120,6 +133,7 @@ export default function Login() {
   }
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-400">
       <div className="min-h-screen bg-white grid grid-cols-1 lg:grid-cols-2">
         {/* Left Side - Illustration */}
@@ -209,6 +223,12 @@ export default function Login() {
           <LoginForm />
         </div>
       </div>
+=======
+    <div className="min-h-[100vh] flex flex-col justify-center items-center">
+      <Logo />
+      <h3 className="mb-10 text-[2.1rem]">Log in to your account</h3>
+      <LoginForm />
+>>>>>>> 6ca7a2d1585679c85c7afef27838194f49b42fd2
     </div>
   );
 }

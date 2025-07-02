@@ -2,7 +2,10 @@ import { useState } from "react";
 
 import Heading from "../ui/Heading";
 import News from "../ui/News";
+<<<<<<< HEAD
 import NewsLoader from "../ui/NewsLoader";
+=======
+>>>>>>> 6ca7a2d1585679c85c7afef27838194f49b42fd2
 import Categories from "../ui/Categories";
 import { useFetchNews } from "../hooks/useFetchNews";
 import { useHandleCategoryClick } from "../hooks/useHandleCategoryClick";
@@ -10,10 +13,17 @@ import { useHandleCategoryClick } from "../hooks/useHandleCategoryClick";
 export default function Home() {
   const initialCategory = "financial-post";
 
+<<<<<<< HEAD
   const { articles, error, isLoading, setArticles, setError, setIsLoading } =
     useFetchNews(initialCategory);
 
   const handleCategoryClick = useHandleCategoryClick(setArticles, setError, setIsLoading);
+=======
+  const { articles, error, setArticles, setError } =
+    useFetchNews(initialCategory);
+
+  const handleCategoryClick = useHandleCategoryClick(setArticles, setError);
+>>>>>>> 6ca7a2d1585679c85c7afef27838194f49b42fd2
 
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
 
@@ -23,7 +33,12 @@ export default function Home() {
     "bbc-news",
     "espn",
     "financial-post",
+<<<<<<< HEAD
 
+=======
+    "reuters",
+    "the-washington-times",
+>>>>>>> 6ca7a2d1585679c85c7afef27838194f49b42fd2
     "usa-today",
   ];
 
@@ -33,6 +48,7 @@ export default function Home() {
   };
 
   if (error) {
+<<<<<<< HEAD
     return (
       <>
         <Heading />
@@ -62,6 +78,10 @@ export default function Home() {
     );
   }
 
+=======
+    return <div>Error: {error}</div>;
+  }
+>>>>>>> 6ca7a2d1585679c85c7afef27838194f49b42fd2
   return (
     <>
       <Heading />
